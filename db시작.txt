@@ -1,0 +1,22 @@
+mydb.sqlite3 파일 생성
+DDL.sql 파일 생성
+마우스 우클릭하고 use database선택 mydb선택
+테이블 생성(import 전에 먼저 해야함)
+CREATE TABLE users (
+  first_name TEXT NOT NULL,
+  last_name TEXT NOT NULL,
+  age INTEGER NOT NULL,
+  country TEXT NOT NULL,
+  phone TEXT NOT NULL,
+  balance INTEGER NOT NULL
+);  
+마우스 오른쪽 run selected query 선택
+
+DML
+users.csv 가져와서 사용
+$ aqlite3 mydb.sqlite3
+(.exit)
+*sql 파일 생성하고 테이블 생성(import 전에 먼저 해야함)
+$ aqlite3 mydb.sqlite3
+sqlite> .mode csv
+sqlite> .import users.csv users
