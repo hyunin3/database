@@ -14,9 +14,21 @@ CREATE TABLE users (
 
 DML
 users.csv 가져와서 사용
-$ aqlite3 mydb.sqlite3
+$ sqlite3 mydb.sqlite3
 (.exit)
 *sql 파일 생성하고 테이블 생성(import 전에 먼저 해야함)
 $ aqlite3 mydb.sqlite3
 sqlite> .mode csv
 sqlite> .import users.csv users
+
+
+SQL 실행 순서
+
+1. FROM / JOIN
+2. WHERE
+3. GROUP BY
+4. HAVING
+5. SELECT
+6. DISTINCT
+7. ORDER BY
+8. LIMIT / LIMIT OFFSET
