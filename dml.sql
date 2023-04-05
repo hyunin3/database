@@ -19,3 +19,15 @@ ORDER BY age, balance DESC;
 
 SELECT DISTINCT country FROM users
 ORDER BY country;
+
+SELECT first_name, age, balance FROM users
+WHERE age>=30 AND balance>=500000;
+
+SELECT first_name, last_name FROM users
+WHERE first_name LIKE '%호%';
+
+SELECT first_name FROM users
+WHERE first_name LIKE '%준';
+
+SELECT first_name, phone FROM users
+WHERE phone LIKE '%-51__-%';
