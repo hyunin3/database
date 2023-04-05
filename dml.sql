@@ -31,3 +31,28 @@ WHERE first_name LIKE '%준';
 
 SELECT first_name, phone FROM users
 WHERE phone LIKE '%-51__-%';
+
+SELECT first_name, country FROM users
+WHERE country IN ('경기도', '강원도');
+
+SELECT first_name, age FROM users
+WHERE age BETWEEN 20 AND 30;
+
+SELECT first_name, age FROM users
+WHERE age NOT BETWEEN 20 AND 30;
+
+SELECT rowid, first_name FROM users 
+LIMIT 10 OFFSET 10;
+
+SELECT first_name, balance FROM users
+ORDER BY balance DESC LIMIT 10;
+
+SELECT first_name, age FROM users
+ORDER BY age LIMIT 5;
+
+SELECT first_name, country FROM users
+WHERE country IN ('경기도') AND first_name IN ('건우');
+
+SELECT first_name, age, country FROM users
+WHERE country NOT IN ('경기도', '강원도') AND age BETWEEN 20 AND 30
+ORDER BY age ASC;
